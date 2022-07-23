@@ -1,0 +1,305 @@
+header {
+  padding-top: 10px;
+  padding-bottom: 80px;
+  background-color: var(--main-color);
+  color: #fff;
+  position: relative;
+}
+header.headerList {
+  padding: 10px 0 40px;
+}
+nav {
+  height: 50px;
+}
+nav .btns {
+  display: flex;
+  gap: 10px;
+}
+.header-list {
+  column-gap: 14px;
+  margin-top: 30px;
+}
+.header-list li {
+  padding: 10px 20px;
+  border: 1px solid transparent;
+  column-gap: 10px;
+  border-radius: 20px;
+  transition: .3s ease-in-out;
+  cursor: pointer;
+  font-weight: 500;
+}
+.header-list li:first-child,
+.header-list li:hover {
+  border-color: #fff;
+  background-color: #fff;
+  color: var(--main-color);
+}
+h1.header-title {
+  font-weight: 600;
+  margin-top: 40px;
+}
+h1.header-title + p {
+  font-weight: 500;
+  margin: 20px 0;
+}
+.options {
+  background-color: #fff;
+  border: 2px solid yellow;
+  border-radius: 6px;
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  width: calc(100% - 48px);
+  max-width: 1024px;
+  z-index: 2;
+}
+.options .option-box {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  column-gap: 10px;
+  cursor: pointer;
+  position: relative;
+}
+.options .option-box:not(:last-child) {
+  padding-left: 14px;
+}
+.options .option-box:not(:last-child) > .option-box {
+  padding: 0;
+}
+.options .option-box .button {
+  height: 100%;
+}
+.options .option-box > input {
+  width: 100%;
+  height: 100%;
+}
+.options .option-box,
+.options .option-box > input[placeholder],
+.options .option-box > input {
+  color: #666;
+  font-weight: 500;
+  font-size: 14px;
+}
+.options .option-box label {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.options .option-box svg {
+  font-size: 20px;
+}
+.options .option-box:nth-child(2),
+.options .option-box:nth-child(3),
+.options .option-box:first-child {
+  border-right: 2px solid yellow;
+  flex: 1;
+}
+.options .option-box:nth-child(2){
+  border-right: 2px solid yellow;
+}
+.options .option-box:nth-child(3) svg:last-child {
+  transform: rotate(90deg);
+}
+.options .option-box .button {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+.options .option-box .button:hover {
+  background-color: #1966d3;
+  color: #fff;
+}
+.searchOptions,
+.date-range {
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  left: 0;
+  box-shadow: 0px 0px 56px -11px rgba(0, 0, 0, 0.13);
+  -webkit-box-shadow: 0px 0px 56px -11px rgba(0,0,0,0.13);
+  -moz-box-shadow: 0px 0px 56px -11px rgba(0,0,0,0.13);
+  background-color: #fff;
+  z-index: 2;
+}
+.searchOptions {
+  row-gap: 20px;
+  padding: 20px;
+  border-radius: 6px;
+}
+.searchOptions li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.searchOptions li > div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  column-gap: 10px;
+}
+.searchOptions li > div > span {
+  width: 10px;
+  text-align: center;
+}
+.searchOptions li button {
+  padding: 5px;
+  background-color: #1e67cd;
+  color: #fff;
+  width: 35px;
+  border-radius: 4px;
+  font-size: 18px;
+  font-weight: 500;
+  transition: .3s ease-in-out;
+}
+.searchOptions li button:disabled:hover,
+.searchOptions li button:disabled {
+  background-color: #ccc;
+  color: #333;
+}
+.searchOptions li button:hover {
+  background-color: var(--main-color);
+}
+
+/* Start Media MAx-width: 1199px */
+@media(max-width: 1199px) {
+  header {
+    padding-bottom: 65px;
+  }
+  .header-list {
+    margin-top: 20px;
+  }
+  .header-list li {
+    font-size: 14px;
+    padding: 8px 14px;
+  }
+  .header-list li svg {
+    font-size: 16px;
+  }
+  h1.header-title {
+    font-size: 30px;
+    margin-top: 30px;
+  }
+  h1.header-title + p {
+    font-size: 14px;
+    margin: 16px 0;
+  }
+  .options {
+    max-width: 860px;
+  }
+  .options .option-box:not(:last-child) {
+    padding-left: 10px;
+  }
+  .options .option-box {
+    column-gap: 6px;
+  }
+  .options .option-box, 
+  .options .option-box > input[placeholder], 
+  .options .option-box > input {
+    font-size: 12px;
+  }
+  .options .option-box:nth-child(3) svg:last-child {
+    transform: translateX(20px) rotate(90deg);
+  }
+  .rdrMonth {
+    width: 100% !important;
+  }
+  .rdrNextPrevButton {
+    margin: 0 !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+  }
+  .rdrNextButton i {
+    margin: 0 !important;
+  }
+}
+/* End Media MAx-width: 1199px */
+/* Start Media MAx-width: 991px */
+@media(max-width: 1199px) {
+  .options > .option-box:first-child {
+    flex: .7;
+  }
+  .options .option-box:not(:last-child) > .option-box {
+    font-size: 12px;
+  }
+  .options .option-box:nth-child(3) svg:last-child {
+    position: absolute;
+    right: 22px;
+    font-size: 16px;
+  }
+}
+/* End Media MAx-width: 991px */
+/* Start Media MAx-width: 767px */
+@media(max-width: 767px) {
+  header {
+    padding-bottom: 120px;
+  }
+  .header-list {
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+  .header-list li {
+    font-size: 12px;
+    padding: 6px 12px;
+    flex-basis: calc((100% - 28px) / 3);
+    flex-grow: 1;
+  }
+  h1.header-title {
+    font-size: 24px;
+    margin-top: 22px;
+  }
+  h1.header-title + p {
+    font-size: 12px;
+    margin: 14px 0;
+  }
+  .options {
+    height: auto;
+    flex-direction: column;
+  }
+  .options .option-box {
+    width: 100%;
+    padding: 10px;
+    border-right: none !important;
+  }
+  .rdrMonthAndYearWrapper {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .options .option-box .button {
+    border-radius: 6px;
+  }
+}
+/* End Media MAx-width: 767px */
+/* Start Media MAx-width: 575px */
+@media(max-width: 575px) {
+  .header-list {
+    gap: 10px;
+  }
+  .header-list li {
+    font-size: 12px;
+    padding: 6px 12px;
+    flex-basis: calc((100% - 10px) / 2);
+    flex-grow: 1;
+  }
+  h1.header-title {
+    font-size: 20px;
+    margin-top: 28px;
+  }
+  .options {
+    width: calc(100% - 40px);
+  }
+}
+/* End Media MAx-width: 575px */
+.welcome-user {
+  font-size: 30px;
+  color: #a0c7ff;
+}
+.logo {
+  color: #fff;
+}

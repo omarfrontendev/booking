@@ -1,0 +1,8 @@
+.footer {
+
+}
+.footer ul {
+  align-items: flex-start;
+  row-gap: 4px;
+  font-size: 12px;
+}

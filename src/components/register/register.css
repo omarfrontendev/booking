@@ -1,0 +1,130 @@
+.register-form {
+  padding: 14px;
+  background-color: var(--main-color);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 10px;
+  border-radius: 4px;
+  position: relative;
+  width: 400px;
+  max-width: 95%;
+  animation: formanimate .3s ease-in-out forwards;
+}
+@keyframes formanimate {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+.register-form .error-message {
+  width: 100%;
+  font-size: 14px;
+  padding: 10px;
+  text-transform: capitalize;
+  color: #700000;
+  background: #c26565;
+}
+.register-form h3 {
+  font-weight: 500;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+.register-form .input-control {
+  width: 100%;
+}
+.register-form .input-control .error-message {
+  font-size: 12px;
+  text-align: left;
+}
+.register-form label {
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  column-gap: 2px;
+  align-items: center;
+}
+.register-form input {
+  display: block;
+  padding: 6px;
+  background: #fff;
+  margin-top: 4px;
+  border-radius: 4px;
+  margin-bottom: 6px;
+  width: 100%;
+}
+.register-form input + button {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.register-form button[type = 'submit'] {
+  width: 100%;
+  text-align: center;
+  margin-top: 8px;
+  padding: 10px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--main-color);
+  transition: .3s ease-in-out;
+  color: #fff;
+  background-color: #000000;
+}
+.register-form button[type = 'submit']:not(:disabled):hover {
+  background-color: #fff;
+  color: var(--main-color);
+}
+.register-form button[type = 'submit']:disabled {
+  background-color: #ddd;
+  color: #888;
+  cursor: unset;
+}
+.register-form button[type = 'submit'] + p {
+  margin-top: 10px;
+  font-size: 14px;
+  opacity: .8;
+}
+.register-form button[type = 'submit'] + p + button {
+  font-size: 14px;
+  margin-top: -5px;
+  color: #fff;
+  font-weight: 500;
+  opacity: .8;
+}
+.close-btn {
+  position: absolute;
+  right: -10px;
+  top: -53px;
+  font-size: 32px;
+  color: #fff;
+}
+.error-icon {
+  color: red;
+  font-size: 29px;
+  /* width: 30px; */
+  /* height: 20px; */
+}
+.success-icon {
+  color: green;
+  width: 30px;
+}
+.success-screen h2 {
+  text-align: center;
+  width: 100%;
+}
+.success-screen button {
+  width: 100%;
+  padding: 10px;
+  background: #fff;
+  color: var(--main-color);
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 50px;
+}

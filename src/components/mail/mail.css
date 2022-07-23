@@ -1,0 +1,38 @@
+.mail {
+  margin-top: var(--section-space);
+  margin-bottom: 20px;
+  padding: 30px 0;
+  background: #001b42;
+  color: #e2e2e2;
+}
+.mail .mail-content h3 {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+.mail .mail-content p {
+  font-size: 14px;
+  margin-bottom: 20px;
+  opacity: .7;
+}
+.mail .mail-content .mail-control {
+  column-gap: 3px;
+  height: 35px;
+  margin-bottom: 4px;
+  width: 400px;
+  max-width: 100%;
+}
+.mail .mail-content .mail-control input {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 4px;
+  display: flex;
+  height: 100%;
+  flex: 1;
+}
+.mail .mail-content .mail-control + div {
+  column-gap: 4px;
+  font-size: 12px;
+  width: 400px;
+  max-width: 100%;
+}

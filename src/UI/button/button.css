@@ -1,0 +1,33 @@
+.button {
+  padding: 10px;
+  background: #1966d3;
+  color: #fff;
+  border-radius: 4px;
+  transition: .3s ease-in-out;
+  font-weight: 500;
+  animation: scale .3s ease-in-out forwards;
+}
+.button:hover {
+  background-color: #fff;
+  color: var(--main-color);
+}
+.button.bgk-white {
+  background-color: #ddd;
+  color: var(--main-color);
+}
+.button.bgk-white:hover {
+  background-color: #1966d3;
+  color: #fff;
+}
+.button.loading {
+  background-color: #ddd;
+  color: #000;
+}
+@keyframes scale {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}

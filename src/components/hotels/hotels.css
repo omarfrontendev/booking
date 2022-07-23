@@ -1,0 +1,122 @@
+.hotels {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+.single-hotel {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  gap: 10px;
+  height: auto;
+}
+.single-hotel .img {
+  flex: 1.5;
+  height: 100%;
+}
+.single-hotel .img img {
+  width: 100%;
+  height: 200px;
+  display: block;
+  object-fit: cover;
+}
+.single-hotel .details {
+  flex: 3;
+  align-items: flex-start;
+  justify-content: flex-start;
+  row-gap: 10px;
+}
+.single-hotel .details .single-hotel-head {
+  width: 100%;
+}
+.details .single-hotel-head h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--main-color);
+}
+.details .single-hotel-head span:first-child {
+  margin-right: 10px;
+  padding: 5px 10px;
+  background-color: var(--main-color);
+  color: #fff;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+}
+span.dist {
+  font-size: 12px;
+  font-weight: 600;
+  color: #8b8b8b;
+}
+p.taxi {
+  padding: 5px 10px;
+  border-radius: 4px;
+  background-color: green;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+}
+p.h-state {
+  font-size: 14px;
+  font-weight: 700;
+  color: #000;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 14px;
+}
+p.h-state span {
+  font-size: 18px;
+}
+.details .btns {
+  justify-content: space-between !important;
+  width: 100%;
+}
+button.cancel {
+  transition: .3s ease-in-out;
+  color: green;
+  font-weight: 600;
+  padding: 6px 12px;
+  padding-left: 0;
+  border-radius: 4px;
+}
+button.cancel:hover {
+  padding: 6px 12px;
+  background-color: red;
+  color: #FFF;
+}
+.single-hotel .details .button:hover {
+  transform: scale(1.2);
+  background-color: rgb(69, 80, 240);
+  color: #000;
+}
+@media(max-width: 575px) {
+  p.h-state,
+  .single-hotel .details .single-hotel-head {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .single-hotel {
+    flex-direction: column;
+    gap: 14px;
+  }
+  .single-hotel .details,
+  .single-hotel .img {
+    width: 100%;
+  }
+  .form form {
+    width: 100%;
+  }
+}
+.lazy-hotels {
+  row-gap: 10px;
+  width: 100%;
+}
+.lazy-hotels .lazy {
+  width: 100%;
+  max-width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

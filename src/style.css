@@ -1,0 +1,115 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  box-shadow: none;
+  list-style: none;
+}
+html {
+  overflow-x: hidden;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+  min-height: 200vh;
+  overflow-x: hidden;
+}
+button {
+  cursor: pointer;
+}
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex.space-between {
+  justify-content: space-between;
+}
+.flex.start {
+  justify-content: flex-start;
+}
+.flex.column {
+  flex-direction: column;
+}
+h2.section-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+.error-message {
+  text-align: center;
+  color: #ed2323;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 24px;
+  padding: 20px;
+  background-color: #e95e5e7a;
+  width: fit-content;
+  margin: 0 auto;
+  border-radius: 4px;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0, .8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+}
+.overlay > img {
+  width: 1000px;
+  height: 500px;
+  max-width: 95%;
+  max-height: 100%;
+  object-fit: cover;
+  position: absolute;
+  /* bottom: 4%; */
+}
+.overlay > button {
+  position: absolute;
+  top: 30px; 
+  right: 10px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 20px;
+  font-weight: 600;
+}
+.container {
+  width: calc(100% - 48px);
+  max-width: 1024px;
+  margin: 0 auto;
+}
+:root {
+  --main-color: #003580;
+  --section-space: 40px;
+}
+
+/* Start Media MAx-width: 1199px */
+@media(max-width: 1199px) {
+  .container {
+    max-width: 860px;
+  }
+}
+/* End Media MAx-width: 1199px */
+/* Start Media MAx-width: 575px */
+@media(max-width: 575px) {
+  .container {
+    width: calc(100% - 40px);
+  }
+}
+/* End Media MAx-width: 575px */
+.rdrMonth {
+  width: 100%;
+}
