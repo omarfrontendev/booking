@@ -40,7 +40,7 @@ const LoginForm = ({ onclose, setRegister }) => {
 
     try {
 
-      const res = await fetch('http://localhost:8000/auth', {
+      const res = await fetch('http://localhost:5000/auth', {
         method: 'POST',
         headers: {
           "Content-Type": "application/json",
@@ -51,7 +51,7 @@ const LoginForm = ({ onclose, setRegister }) => {
       })
       const data = await res.json();
 
-      const getUser = await fetch(`http://localhost:8000/register/${id}`);
+      const getUser = await fetch(`http://localhost:5000/register/${id}`);
       const userID = await getUser.json()
 
       setAuth({

@@ -14,7 +14,7 @@ const Nav = () => {
   const logoutHandler = async () => {
     try {
 
-      const res = await fetch(`http://localhost:8000/auth/${auth.id}`, {
+      const res = await fetch(`http://localhost:5000/auth/${auth.id}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",

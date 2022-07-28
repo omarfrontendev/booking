@@ -28,7 +28,7 @@ const List = () => {
   const getData = async () => {
     setIsLoading(true)
     try {
-      const res = await fetch(`http://localhost:8000/searchResult`);
+      const res = await fetch(`http://localhost:5000/searchResult`);
       const data = await res.json();
       setError(false)
       setData(data);

@@ -94,7 +94,7 @@ const RegisterForm = ({ onclose, setRegister }) => {
     };
     
     try {
-      const res = await fetch('http://localhost:8000/register', {
+      const res = await fetch('http://localhost:5000/register', {
         method: 'POST',
         headers: {
           "Content-Type": "application/json",
@@ -107,7 +107,7 @@ const RegisterForm = ({ onclose, setRegister }) => {
       setIsloading(false);
       setSuccess(true);
 
-      const res2 = await fetch('http://localhost:8000/auth', {
+      const res2 = await fetch('http://localhost:5000/auth', {
         method: 'POST',
         headers: {
           "Content-Type": "application/json",

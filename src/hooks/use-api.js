@@ -9,7 +9,7 @@ const FetchData = (route) => {
   const getData = async () => {
     setIsLoading(true)
     try {
-      const res = await fetch(`http://localhost:8000/${route}`);
+      const res = await fetch(`http://localhost:5000/${route}`);
       const data = await res.json();
       setError(false)
       setData(data);
