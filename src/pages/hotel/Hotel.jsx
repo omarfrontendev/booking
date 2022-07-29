@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Header from '../../components/header/Header'
 import Container from '../../UI/Container'
 import Mail from '../../components/mail/Mail'
@@ -10,23 +10,30 @@ import HotelLazy from './HotelLazy'
 import './hotel.css'
 import HotelContent from './HotelContent'
 
-const Hotel = () => {
+const Hotel = ({ data }) => {
 
   const params = useParams();
 
-  const {
-    data: hotel,
-    isLoading,
-    error
-  } = FetchData(`searchResult/${params.ID}`)
+  // const {
+  //   data: hotel,
+  //   isLoading,
+  //   error
+  // } = FetchData(`searchResult/${params.ID}`)
+
+  let hotel = data.find(d => d.id === +params.ID);
+
+  if(!hotel) {
+    return <h1>Something Wrong!</h1>
+  };
 
   return (
     <>
     <Header type='list' />
     <Container>
       <section className="hotel">
-        {isLoading ? <HotelLazy /> : <HotelContent {...hotel} />}
-        {error && <p className='error-message'>Something Wrong!</p>}
+        <HotelContent {...hotel} />
+        {/* {isLoading ? <HotelLazy /> : <HotelContent {...hotel} />}
+        {error && <p className='error-message'>Something Wrong!</p>} */}
       </section>
     </Container>
       <Mail />

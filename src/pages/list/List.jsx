@@ -11,7 +11,7 @@ import Footer from '../../components/footer/Footer'
 
 import './list.css'
 
-const List = () => {
+const List = ({data  }) => {
 
   const location = useLocation();
   const [destination, setDestination] = useState(location.state.searchPlace)
@@ -19,44 +19,44 @@ const List = () => {
   const [options, setOptions] = useState(location.state.options)
   const [openCalendar, setOpenCalendar] = useState(false);
 
-  const [data, setData] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState(false);
+  // const [data, setData] = useState([]);
+  // const [isLoading, setIsLoading] = useState(false);
+  // const [error, setError] = useState(false);
 
   // Get Data
 
-  const getData = async () => {
-    setIsLoading(true)
-    try {
-      const res = await fetch(`http://localhost:5000/searchResult`);
-      const data = await res.json();
-      setError(false)
-      setData(data);
-      setIsLoading(false)
-    }catch (error) {
-      console.log(error)
-      setIsLoading(false)
-      setError(true)
-    }
-    setIsLoading(false)
-  }
-  useEffect(() => {
-    getData();
-  }, [])
+  // const getData = async () => {
+  //   setIsLoading(true)
+  //   try {
+  //     const res = await fetch(`http://localhost:5000/searchResult`);
+  //     const data = await res.json();
+  //     setError(false)
+  //     setData(data);
+  //     setIsLoading(false)
+  //   }catch (error) {
+  //     console.log(error)
+  //     setIsLoading(false)
+  //     setError(true)
+  //   }
+  //   setIsLoading(false)
+  // }
+  // useEffect(() => {
+  //   getData();
+  // }, [])
 
 
   // Form Action Handle
 
   const changeOptionsHandler = (name, value) => {
-    setOptions({
-      ...options,
-      [name]: value
-    })
+    // setOptions({
+    //   ...options,
+    //   [name]: value
+    // })
   };
 
   const searchFormHandler = event => {
     event.preventDefault();
-    getData();
+    // getData();
   };
 
   return (
@@ -147,15 +147,16 @@ const List = () => {
                 </div>
               </div>
               <Button
-                classes={`${isLoading ? 'loading' : ''}`}
+                // classes={`${isLoading ? 'loading' : ''}`}
                 type='submit'
               >
-                {isLoading ? 'Loading...!' : 'Search'}
+                {/* {isLoading ? 'Loading...!' : 'Search'} */}
+                Search
               </Button>
             </form>
           </div>
           <div className="list">
-            <Hotels hotels={data} isLoading={isLoading} error={error} />
+            <Hotels hotels={data}  />
           </div>
         </div>
       </Container>

@@ -14,7 +14,7 @@ const LoginForm = ({ onclose, setRegister }) => {
   const [success, setSuccess] = useState(false);
   const [showPwd, setShowPwd] = useState(false);
 
-  const { data: allRegisters } = FetchData('register');
+  // const { data: allRegisters } = FetchData('register');
 
   useEffect(() => {
     setErrMsg('')
@@ -23,57 +23,57 @@ const LoginForm = ({ onclose, setRegister }) => {
   const submitFormHandler = async e => {
     e.preventDefault();
 
-    let alreadyUser = false;
+    // let alreadyUser = false;
     let id = '';
 
-    allRegisters.forEach(r => {
-      if(r.user === user && r.pwd === pwd) {
-        alreadyUser = true
-        id = r.id
-      }
-    });
+    // allRegisters.forEach(r => {
+    //   if(r.user === user && r.pwd === pwd) {
+    //     alreadyUser = true
+    //     id = r.id
+    //   }
+    // });
     
-    if(!alreadyUser) {
-      setErrMsg('Missing user or password!')
-      return;
-    }
+    // if(!alreadyUser) {
+    //   setErrMsg('Missing user or password!')
+    //   return;
+    // }
 
-    try {
+    // try {
 
-      const res = await fetch('http://localhost:5000/auth', {
-        method: 'POST',
-        headers: {
-          "Content-Type": "application/json",
-          "Accept": "application/json"
-        },
-        WithCredintails: true,
-        body: JSON.stringify({ user, pwd }),
-      })
-      const data = await res.json();
+      // const res = await fetch('http://localhost:5000/auth', {
+      //   method: 'POST',
+      //   headers: {
+      //     "Content-Type": "application/json",
+      //     "Accept": "application/json"
+      //   },
+      //   WithCredintails: true,
+      //   body: JSON.stringify({ user, pwd }),
+      // })
+      // const data = await res.json();
 
-      const getUser = await fetch(`http://localhost:5000/register/${id}`);
-      const userID = await getUser.json()
+      // const getUser = await fetch(`http://localhost:5000/register/${id}`);
+      // const userID = await getUser.json()
 
       setAuth({
-        user: data.user,
-        pwd: data.pwd,
-        dummyToken: userID.dummyToken,
+        user: user,
+        pwd: pwd,
+        // dummyToken: userID.dummyToken,
         id
       });
 
       localStorage.setItem('auth', JSON.stringify({
-        user: data.user,
-        pwd: data.pwd,
-        dummyToken: userID.dummyToken,
+        user: user,
+        pwd: pwd,
+        // dummyToken: userID.dummyToken,
         id
       }))
 
       setSuccess(true)
 
-    } catch (err) {
-      console.log(err)
-      setSuccess('Login Failed!')
-    }
+    // } catch (err) {
+    //   console.log(err)
+    //   setSuccess('Login Failed!')
+    // }
   }
 
   return (

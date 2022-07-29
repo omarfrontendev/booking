@@ -12,7 +12,7 @@ const HotelContent = ({ title, locaton, imgs, desc, price }) => {
 
 
   const bookingHandler = () => {
-    auth.dummyToken ? setBooked(prev => !prev) : setOpenRegister(true)
+    auth.user ? setBooked(prev => !prev) : setOpenRegister(true)
   }
 
   return (

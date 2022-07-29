@@ -12,32 +12,32 @@ const Nav = () => {
 
 
   const logoutHandler = async () => {
-    try {
+    // try {
 
-      const res = await fetch(`http://localhost:5000/auth/${auth.id}`, {
-        method: "DELETE",
-        headers: {
-          "Content-Type": "application/json",
-          "Accept": "application/json"
-        },
-        WithCredintails: true,
-      });
+      // const res = await fetch(`http://localhost:5000/auth/${auth.id}`, {
+      //   method: "DELETE",
+      //   headers: {
+      //     "Content-Type": "application/json",
+      //     "Accept": "application/json"
+      //   },
+      //   WithCredintails: true,
+      // });
 
       setAuth({})
       localStorage.removeItem('auth');
 
-    } catch (err) {
-      console.log(err)
-    }
+    // } catch (err) {
+    //   console.log(err)
+    // }
   }
 
   return (
     <>
       <nav className='flex space-between'>
-        <Link to='/' className="logo">
+        <Link to='/booking' className="logo">
           Logo
         </Link>
-        {auth?.dummyToken ?
+        {auth?.user ?
           <Button
             onClick={logoutHandler}
             classes='bgk-white'

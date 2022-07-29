@@ -19,7 +19,7 @@ const Header = ({ type }) => {
     <header className={`${type === 'list' ? 'headerList' : ''}`}>
       <Container>
         <Nav />
-        <HeaderList />
+        {/* <HeaderList /> */}
         {type !== 'list' && 
         <>
           <h1 className="header-title">A lifetime of discounts? it's Genius.</h1>
